@@ -1,4 +1,5 @@
 import win32api, win32con, win32gui, os, requests, json, shutil
+from api_key import api_key
 #----------------------------------------------------------------------
 
 desktopDescription = True
@@ -33,7 +34,7 @@ def getAPOD(payload, path):
 if __name__ == "__main__":
     payload = {
         'hd': True,
-        'api_key': 'YOUR API KEY'
+        'api_key': api_key
     }
     path = os.path.abspath('apod.jpg')
     getAPOD(payload, path)
